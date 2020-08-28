@@ -11,8 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/tonethar/joke-server.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["430","demo"],
+  "author": "Tony",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tonethar/joke-server/issues"
