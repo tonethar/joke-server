@@ -2,6 +2,12 @@ const http = require('http');
 
 const port = process.env.PORT || process.env.NODE_PORT || 3000;
 
+const indexPage = `<html>
+										<h1>Welcome to Jokes!!</h1>
+										<p>Standard joke service is here --> <a href="./stale-joke">stale-joke</a></p>
+										<p>Random joke service is here --> <a href="./random-joke">random-joke</a></p>
+									</html>`;
+									
 const jokes = [
 	{"q" : "Why did the chicken cross the road?", "a" : "To get to the other side!"},
 	{"q" : "What do you call a very small valentine?","a":"A valen-tiny!"},
@@ -10,13 +16,6 @@ const jokes = [
 	{"q" : "What did the boy cat say to the girl cat?","a":"You're Purr-fect!"},
 	{"q" : "What is a frog's favorite outdoor sport?","a":"Fly Fishing!"}
 ];
-
-const indexPage = `<html>
-										<h1>Welcome to Jokes</h1>
-										<p>Standard joke service is here --> <a href="./joke">joke</a></p>
-										<p>Random joke service is here --> <a href="./random">random</a></p>
-									</html>`;
-									
 
 const getIndex = (request, response) => {
   response.writeHead(200, { 'Content-Type': 'text/html' });
@@ -41,9 +40,9 @@ const getRandomJoke = (request, response) => {
 
 const onRequest = (request, response) => {
   console.log(request.url);
-	if(request.url == "/joke"){
+	if(request.url == "/stale-joke"){
 		getJoke(request, response);
-	}else if(request.url == "/random"){
+	}else if(request.url == "/random-joke"){
 		getRandomJoke(request, response);
 	}else{
 		getIndex(request, response);

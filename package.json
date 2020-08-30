@@ -5,17 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./index.js"
+    "start": "node ./src/index.js",
+    "nodemon": "nodemon --watch ./src ./src/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tonethar/joke-server.git"
   },
-  "keywords": ["430","demo"],
+  "keywords": [
+    "430",
+    "demo"
+  ],
   "author": "Tony",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tonethar/joke-server/issues"
   },
-  "homepage": "https://github.com/tonethar/joke-server#readme"
+  "homepage": "https://github.com/tonethar/joke-server#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
