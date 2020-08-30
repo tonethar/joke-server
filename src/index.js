@@ -18,7 +18,7 @@ const jokes = [
 ];
 
 const getIndex = (request, response) => {
-  response.writeHead(200, { 'Content-Type': 'text/html' });
+	response.writeHead(200, { 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*' });
   response.write(indexPage);
   response.end();
 };
