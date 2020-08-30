@@ -24,7 +24,7 @@ const getIndex = (request, response) => {
 };
 
 const getJoke = (request, response) => {
-  response.writeHead(200, { 'Content-Type': 'application/json','Access-Control-Allow-Origin: '*' });
+  response.writeHead(200, { 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*' });
   const json = JSON.stringify(jokes[0]);
   response.write(json);
   response.end();
