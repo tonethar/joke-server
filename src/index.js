@@ -31,7 +31,7 @@ const getJoke = (request, response) => {
 };
 
 const getRandomJoke = (request, response) => {
-  response.writeHead(200, { 'Content-Type': 'application/json' });
+  response.writeHead(200, { 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*' });
   const joke = jokes[Math.floor(Math.random() * jokes.length)];
   const json = JSON.stringify(joke);
   response.write(json);
